@@ -30,13 +30,13 @@ function Header() {
     return (
         <header>
             <nav>
-            <FontAwesomeIcon icon={faWizardsOfTheCoast} id="logo"/>
-            <div id='navLinks'>
-                <Link to={''}>Home</Link>
-                <Link to={''}>Discussions</Link>
-                <Link to={''}>Sign Up</Link>
-                <Link to={''}>Login</Link>
-            </div>
+                <FontAwesomeIcon icon={faWizardsOfTheCoast} id="logo" />
+                <div id='navLinks'>
+                    <Link to={'/'}>Home</Link>
+                    <Link to={''}>Discussions</Link>
+                    <Link to={''}>Login</Link>
+                    <Link to={'/register'}>Register</Link>
+                </div>
             </nav>
         </ header>
     );

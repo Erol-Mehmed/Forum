@@ -21,21 +21,25 @@
 
 
 import './App.css';
-import Header from './components/views/Home/Header/Header';
-import Footer from './components/views/Home/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/views/Home/Home/Home';
+import Home from './components/views/Home/FooterHome/Home/Home';
+import Register from './components/views/Register/Register';
+import Header from './components/views/Header/Header';
 
 function App() {
 
    return (
 
-   <>
-      <Routes>
-         <Route path="" element={<Home />} />
-         {/* <Route path="/" element={<Home />} /> */}
-      </Routes>
-   </>
+      <>
+         <Header />
+         <div id='mainContent'>
+            <Routes>
+               <Route path="" element={<Home />} />
+               <Route path="/" element={<Home />} />
+               <Route path="/register" element={<Register />} />
+            </Routes>
+         </div>
+      </>
 
    )
 

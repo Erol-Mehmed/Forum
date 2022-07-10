@@ -25,8 +25,7 @@ main {
         "firstImage secondImage";
    grid-template-columns: 1fr 1fr;
    grid-area: main;
-   background-size: contain;
-   
+   height: 80vh;
 }
 
 img {
@@ -35,15 +34,15 @@ img {
 }
 
 #mainDiv {
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 250px;
     background-color: rgb(229, 220, 237);
     position: absolute;
     border-radius: 20px;
     align-self: center;
-    left: 38.5%;
-}
-
-#mainFlexDiv {
-    display: flex;
+    justify-self: center;
+    padding: 8px;
+    text-align: center;
 }

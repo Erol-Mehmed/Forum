@@ -20,8 +20,8 @@
 
 
   header {
+    height: 13vh;
     grid-area: header;
-    height: 10vh;
   }
   
   nav {
@@ -29,11 +29,10 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: #bbe4e9;
-    height: 18vh;
   }
 
   #logo {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   
   #navLinks {
