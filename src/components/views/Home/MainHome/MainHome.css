@@ -25,7 +25,7 @@ main {
         "firstImage secondImage";
    grid-template-columns: 1fr 1fr;
    grid-area: main;
-   height: 80vh;
+   height: 77vh;
 }
 
 img {

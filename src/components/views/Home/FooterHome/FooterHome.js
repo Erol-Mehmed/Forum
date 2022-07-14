@@ -19,18 +19,26 @@
 
 
 
-import './FooterHome.css';
+import styles from './FooterHome.module.css';
 
-function Footer() {
+function Footer(props) {
+
+    const { footer, footerPar } = props;
 
     return (
 
-        <footer>
-            <p id='footerPar'>The place to discuss our shared passion for the interactive entertainment</p>
+        <footer className={footer}>
+            <p className={footerPar} >The place to discuss our endless passion for the interactive entertainment</p>
         </footer>
 
     );
 
 }
 
+Footer.defaultProps = {
+    footer: styles.footer,
+    footerPar: styles.footerPar
+}
+
 export default Footer;
+

@@ -19,8 +19,8 @@
 
 
 
-import Footer from '../FooterHome';
-import Main from '../../MainHome/MainHome';
+import Footer from '../FooterHome/FooterHome';
+import Main from '../MainHome/MainHome';
 import './Home.css';
 
 function Home() {

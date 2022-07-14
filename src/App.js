@@ -22,7 +22,7 @@
 
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/views/Home/FooterHome/Home/Home';
+import Home from './components/views/Home/Home/Home';
 import Register from './components/views/Register/Register';
 import Header from './components/views/Header/Header';
 

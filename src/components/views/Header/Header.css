@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #bbe4e9;
+    background-color: #f95959;
   }
 
   #logo {
@@ -49,4 +49,7 @@
   
   #navLinks a {
     text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
   }

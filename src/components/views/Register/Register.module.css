@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 75vh;
+    width: 50%;
+    background-color: rgb(242, 239, 239);
+}
+
+.formDiv {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background-color: #bbe4e9;
+    padding: 40px;
+}
+
+.formTag {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+button {
+  width: 80px;
+  height: 5vh;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+   background-color: #f95959;
+   cursor: pointer;
+}
+
+.h3 {
+    position: relative;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 50%;
+}
+
+.h3::before {
+    content: "";
+    width: 513px;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+} 
+
+.h3::after {
+    content: "";
+    width: 513px;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+} 
+
+.footerPar {
+    font-size: 0px;
+}
