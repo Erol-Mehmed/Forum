@@ -23,16 +23,26 @@
 import { useForm } from 'react-hook-form';
 import styles from './Register.module.css';
 import Footer from '../Home/FooterHome/FooterHome';
+import { useNavigate } from 'react-router-dom';
+import { registerToServer } from '../../../api/users';
 
 function Register() {
     const { register, handleSubmit } = useForm();
-    const handleRegistration = (data) => { 
+    const navigate = useNavigate();
+    const handleRegistration = async (data) => { 
 
-        
-
-        if (data.password !== data.passwordConfirm) {
-            alert('Passwords does not match!');
+        try {
+            if (data.password !== data.passwordConfirm) {
+                throw new Error('Passwords does not match!');
+            } else {
+                await registerToServer(data.username, data.email, data.password);
+            }
+            
+            navigate('/');
+        } catch (err) {
+            alert(err.message);
         }
+
         
         console.log(data);
     

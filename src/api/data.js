@@ -23,12 +23,9 @@
 import * as api from "./api.js"
 
 const endpoints = {
-    'getAllBooks': '/data/books?sortBy=_createdOn%20desc',
-    'getBookById': '/data/books/',
-    'getMyBooks': (userId) => `/data/books?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`,
     'addBooks': '/data/books',
     'editBook': '/data/books/',
-    'deleteBook': '/data/books/',
+    'deleteBook': '/data/books/'
 }
 
 export async function getAllBooks() {
