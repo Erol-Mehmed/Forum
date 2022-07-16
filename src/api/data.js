@@ -20,7 +20,7 @@
 
 
 
-import * as api from "./api.js"
+import * as api from "./api.js";
 
 const endpoints = {
     'addBooks': '/data/books',

@@ -58,7 +58,7 @@ function Register() {
                     <div className={styles.formDiv}>
                         <form className={styles.formTag} onSubmit={handleSubmit(handleRegistration)}>
                             <label>Username:
-                                <input type="text" name="userName" required placeholder="Username" {...register('userName')} />
+                                <input type="text" name="username" required placeholder="Username" {...register('username')} />
                             </label>
                             <label>Email:
                                 <input type="email" name="email" required placeholder="Email" {...register('email')} />

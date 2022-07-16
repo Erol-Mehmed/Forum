@@ -29,8 +29,8 @@ const endpoints = {
     'logout': '/users/logout',
 }
 
-export async function login(email, password) {
-    const user = await post(endpoints.login, { email, password });
+export async function login(username, password) {
+    const user = await post(endpoints.login, { username, password });
 
     setUserData(user);
 }

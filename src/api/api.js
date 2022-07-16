@@ -20,7 +20,7 @@
 
 
 
-const host = 'http://localhost:3000';
+const host = 'http://localhost:3030';
 
 async function request(method, url, data) {
     const options = {
@@ -30,10 +30,10 @@ async function request(method, url, data) {
 
     if (data !== undefined) {
         options.headers['Content-Type'] = 'application/json';
-        options.body = JSON.stringify(data)
+        options.body = JSON.stringify(data);
     }
 
-    const user = JSON.parse(localStorage.getItem('user'))
+    const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
         const token = user.accessToken;
         options.headers['X-Authorization'] = token;
