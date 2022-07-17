@@ -1338,11 +1338,11 @@
 
     var rules = initPlugin$3;
 
-    var identity = "email";
+    var identity = "username";
     var protectedData = {
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                email: "erol.mehmed07@gmail.com",
+                email: "erol@abv.bg",
                 username: "Erol",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },

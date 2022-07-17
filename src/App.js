@@ -28,11 +28,11 @@ import Header from './components/views/Header/Header';
 import Login from './components/views/Login/Login';
 
 function App() {
-
+   
    return (
 
       <>
-         <Header />
+         <Header isLoggedIn={false}/>
          <div id='mainContent'>
             <Routes>
                <Route path="" element={<Home />} />

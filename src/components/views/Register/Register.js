@@ -43,7 +43,6 @@ function Register() {
             alert(err.message);
         }
 
-        
         console.log(data);
     
     };
