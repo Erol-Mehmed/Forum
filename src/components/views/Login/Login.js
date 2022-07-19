@@ -35,8 +35,7 @@ function Login() {
             await login(data.username, data.password);
             navigate('/');
         } catch (err) {
-            
-            // alert(err.message);
+            alert("Username or password is invalid!");
         }
 
     };
