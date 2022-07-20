@@ -29,11 +29,11 @@
 
 .communities {
     background-color: white;
-    height: 30vh;
+    height: 33.35vh;
     width: 80%;
     border: 1px solid black;
     border-radius: 7px;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .header {
@@ -52,3 +52,74 @@
     margin-left: 8px;
 }
 
+.generalDisc {
+    display: flex;
+    flex-direction: row;
+    height: 13vh;
+    border-bottom: 1px solid black;
+}
+
+.originalWorks {
+    display: flex;
+    flex-direction: row;
+    height: 13vh;
+}
+
+.icon {
+    align-self: center;
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.generalDisc .heading, .originalWorks .heading {
+    margin-top: 10px;
+    font-size: 0.96rem;
+    font-weight: bold;
+    color: #a2a8d3;
+}
+
+.generalDisc .column, .originalWorks .column {
+    width: 600px;
+    margin-left: 20px;
+}
+
+.generalDisc .description {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.originalWorks .description {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.generalDisc .statistics, .originalWorks .statistics {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.threads {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics p {
+    font-size: 0.9rem;
+}
+
+.countP  {
+    align-self: center;
+}
