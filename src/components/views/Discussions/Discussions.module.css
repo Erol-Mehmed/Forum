@@ -21,9 +21,10 @@
 
 .body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 140vh;
     background-color: #d8d7d7;
 }
 
@@ -34,6 +35,15 @@
     border: 1px solid black;
     border-radius: 7px;
     margin-top: 70px;
+}
+
+.gaming {
+    background-color: white;
+    height: 73vh;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-top: 30px;
 }
 
 .header {
@@ -52,14 +62,14 @@
     margin-left: 8px;
 }
 
-.generalDisc {
+.discSections {
     display: flex;
     flex-direction: row;
     height: 13vh;
     border-bottom: 1px solid black;
 }
 
-.originalWorks {
+.discSectionsLast {
     display: flex;
     flex-direction: row;
     height: 13vh;
@@ -71,33 +81,26 @@
     margin-left: 15px;
 }
 
-.generalDisc .heading, .originalWorks .heading {
+.discSections .heading, .discSectionsLast .heading {
     margin-top: 10px;
     font-size: 0.96rem;
     font-weight: bold;
     color: #a2a8d3;
 }
 
-.generalDisc .column, .originalWorks .column {
+.discSections .column, .discSectionsLast .column {
     width: 600px;
     margin-left: 20px;
 }
 
-.generalDisc .description {
+.discSections .description, .discSectionsLast .description {
     font-size: 0.75rem;
     font-weight: bold;
     color: black;
     text-align: left;
 }
 
-.originalWorks .description {
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: black;
-    text-align: left;
-}
-
-.generalDisc .statistics, .originalWorks .statistics {
+.discSections .statistics, .discSectionsLast .statistics {
     display: flex;
     flex-direction: row;
     align-self: center;
