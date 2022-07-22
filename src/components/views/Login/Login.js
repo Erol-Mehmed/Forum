@@ -24,15 +24,23 @@ import styles from './Login.module.css';
 import { useForm } from 'react-hook-form';
 import { login } from '../../../api/users';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserDataContext } from '../../../App';
 
 function Login() {
+    const {user, setUser} = useContext(UserDataContext);
+
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const handleLogin = async (data) => {
-        console.log(data.username, data.password);
+        console.log(data.username, data.password, user);
 
         try {
+            setUser(true);
+          
+            // console.log(user);
             await login(data.username, data.password);
+
             navigate('/');
         } catch (err) {
             alert("Username or password is invalid!");

@@ -27,13 +27,18 @@ import Register from './components/views/Register/Register';
 import Header from './components/views/Header/Header';
 import Login from './components/views/Login/Login';
 import Discussions from './components/views/Discussions/Discussions';
+import { createContext, useContext, useState } from 'react';
+
+export const UserDataContext = createContext('unknown');
 
 function App() {
+   const [user, setUser] = useState(false);
 
    return (
 
       <>
-         <Header />
+         <UserDataContext.Provider value={{user, setUser}}>
+            <Header />
          <div id='mainContent'>
             <Routes>
                <Route path="" element={<Home />} />
@@ -43,6 +48,7 @@ function App() {
                <Route path="/discussions" element={<Discussions />} />
             </Routes>
          </div>
+         </UserDataContext.Provider>
       </>
 
    )

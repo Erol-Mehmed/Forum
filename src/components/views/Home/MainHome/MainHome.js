@@ -20,8 +20,8 @@
 
 
 import styles from './MainHome.module.css';
-import firstImage from '../../../images/firstImage3.jpg';
-import secondImage from '../../../images/homeBB.jpg';
+import firstImage from '../../../images/firstImage2.jpg';
+import secondImage from '../../../images/secondImage.jpg';
 
 function Welcome(props) {
 
