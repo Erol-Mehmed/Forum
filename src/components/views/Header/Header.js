@@ -24,23 +24,24 @@ import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 import { logout } from '../../../api/users';
 import logo from '../../images/logo5.png';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { UserDataContext } from '../../../App';
 
-function Header({ username }) {
-    const { user, setUser } = useContext(UserDataContext);
-    
-    const HandleLogout = () => {
+function Header() {
 
-        useEffect(() => {
-            localStorage.removeItem('user');
-            logout();
-        })
+    const { user, setUser } = useContext(UserDataContext);
+
+    const handleLogout = () => {
+        alert('logout');
+        logout();
+        Header.forceUpdate();
     }
 
-    console.log(username);
+    console.log(localStorage.getItem('user'));
 
-    if (username) {
+    console.log(user);
+
+    if (user !== null) {
 
         return (
             <header className={styles.header}>
@@ -49,7 +50,7 @@ function Header({ username }) {
                     <div className={styles.navLinks}>
                         <Link to={'/'}>Home</Link>
                         <Link to={'/discussions'}>Discussions</Link>
-                        <Link to={'/'} onClick={HandleLogout}>Logout</Link>
+                        <Link to={'/'} onClick={handleLogout}>Logout</Link>
                     </div>
                 </nav>
             </ header>

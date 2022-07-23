@@ -28,16 +28,14 @@ import { useContext } from 'react';
 import { UserDataContext } from '../../../App';
 
 function Login() {
-    const {user, setUser} = useContext(UserDataContext);
+    const { user, setUser } = useContext(UserDataContext);
 
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const handleLogin = async (data) => {
-        console.log(data.username, data.password, user);
-
         try {
             await login(data.username, data.password);
-            handleLogin()
+            setUser(JSON.parse(localStorage.getItem('user')));
             navigate('/');
         } catch (err) {
             alert("Username or password is invalid!");
