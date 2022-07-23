@@ -27,15 +27,20 @@ import logo from '../../images/logo5.png';
 import { useContext, useEffect } from 'react';
 import { UserDataContext } from '../../../App';
 
-function Header() {
-    const {user, setUser} = useContext(UserDataContext);
-    useEffect(() => {
-        // storing input name
-        localStorage.setItem(user, JSON.stringify(user));
-      }, [user]);
-    console.log(user);
+function Header({ username }) {
+    const { user, setUser } = useContext(UserDataContext);
+    
+    const HandleLogout = () => {
 
-    if (user) {
+        useEffect(() => {
+            localStorage.removeItem('user');
+            logout();
+        })
+    }
+
+    console.log(username);
+
+    if (username) {
 
         return (
             <header className={styles.header}>
@@ -44,7 +49,7 @@ function Header() {
                     <div className={styles.navLinks}>
                         <Link to={'/'}>Home</Link>
                         <Link to={'/discussions'}>Discussions</Link>
-                        <Link to={'/'} onClick={logout}>Logout</Link>
+                        <Link to={'/'} onClick={HandleLogout}>Logout</Link>
                     </div>
                 </nav>
             </ header>

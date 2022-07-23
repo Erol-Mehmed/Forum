@@ -36,11 +36,8 @@ function Login() {
         console.log(data.username, data.password, user);
 
         try {
-            setUser(true);
-          
-            // console.log(user);
             await login(data.username, data.password);
-
+            handleLogin()
             navigate('/');
         } catch (err) {
             alert("Username or password is invalid!");

@@ -29,16 +29,21 @@ import Login from './components/views/Login/Login';
 import Discussions from './components/views/Discussions/Discussions';
 import { createContext, useContext, useState } from 'react';
 
-export const UserDataContext = createContext('unknown');
+export const UserDataContext = createContext();
 
 function App() {
-   const [user, setUser] = useState(false);
+   const [user, setUser] = useState(
+      {
+         _id: '',
+         username: '',
+         accessToken: ''
+      }
+   );
 
    return (
 
-      <>
-         <UserDataContext.Provider value={{user, setUser}}>
-            <Header />
+         <UserDataContext.Provider value={{user}}>
+            <Header username={user.username}/>
          <div id='mainContent'>
             <Routes>
                <Route path="" element={<Home />} />
@@ -49,8 +54,7 @@ function App() {
             </Routes>
          </div>
          </UserDataContext.Provider>
-      </>
-
+     
    )
 
 }
